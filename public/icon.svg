@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1c1917" />
+      <stop offset="100%" stop-color="#09090b" />
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="25%" stop-color="#EAB308" />
+      <stop offset="50%" stop-color="#CA8A04" />
+      <stop offset="75%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#D97706" stop-opacity="0" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#EAB308" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background base -->
+  <rect width="512" height="512" rx="120" fill="url(#bgGrad)" />
+  <rect width="504" height="504" x="4" y="4" rx="116" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-opacity="0.7" />
+
+  <!-- Outer radar pulse circles -->
+  <circle cx="256" cy="230" r="160" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="6 8" opacity="0.3" />
+  <circle cx="256" cy="230" r="120" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" opacity="0.45" />
+  <circle cx="256" cy="230" r="80" fill="none" stroke="url(#goldGrad)" stroke-width="3" opacity="0.65" />
+
+  <!-- Target crosshairs -->
+  <line x1="256" y1="50" x2="256" y2="410" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.3" />
+  <line x1="76" y1="230" x2="436" y2="230" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.3" />
+
+  <!-- Gold Location Pin -->
+  <g filter="url(#shadow)">
+    <path d="M 256 120 
+             C 200 120, 155 165, 155 221
+             C 155 285, 230 360, 256 385
+             C 282 360, 357 285, 357 221
+             C 357 165, 312 120, 256 120 Z" 
+          fill="url(#goldGrad)" />
+    
+    <!-- Inner Dark Pin Core -->
+    <circle cx="256" cy="216" r="44" fill="#09090b" />
+    <circle cx="256" cy="216" r="40" fill="none" stroke="url(#goldGrad)" stroke-width="3" />
+
+    <!-- Compass / Monogram "A" in gold -->
+    <path d="M 256 188 L 274 235 L 263 235 L 256 215 L 249 235 L 238 235 Z" fill="url(#goldGrad)" />
+    <line x1="247" y1="225" x2="265" y2="225" stroke="#09090b" stroke-width="2.5" />
+  </g>
+
+  <!-- Bottom Brand Ribbon Text -->
+  <text x="256" y="445" font-family="'Cinzel', 'Trajan Pro', 'Georgia', serif" font-size="28" font-weight="800" letter-spacing="6" fill="url(#goldGrad)" text-anchor="middle">AFZAAL</text>
+  <text x="256" y="475" font-family="'Inter', sans-serif" font-size="14" font-weight="600" letter-spacing="4" fill="#EAB308" opacity="0.8" text-anchor="middle">LOCATION SHARE</text>
+</svg>

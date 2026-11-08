@@ -1,0 +1,6 @@
+{
+  "name": "AFZAAL LOCATION SHARE",
+  "description": "Real-time, privacy-first mobile and desktop location sharing with friends in luxury black and gold styling.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
